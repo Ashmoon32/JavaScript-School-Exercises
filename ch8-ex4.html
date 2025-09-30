@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: lightcyan;
+        }
+
+       body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+       }
+
+       form {
+        background-color:whitesmoke;
+        padding: 40px;
+        border-radius: 10px;
+        border: 1px solid black;
+       }
+
+       form input {
+        margin: 5px;
+       }
+
+       input[type="button"] {
+        padding: 5px;
+        background-color: rgb(90, 196, 231);
+        font-weight: bold;
+        border: 1px solid black;
+        border-radius: 5px;
+        
+       }
+    </style>
+</head>
+<body>
+    <form action="" name="frmSnacks">
+        Your basket order <br>
+        <input type="checkbox" name="basketItems" value="1">Chcolate cookies <br>
+        <input type="checkbox" name="basketItems" value="2">Potato chips <br>
+        <input type="checkbox" name="basketItems" value="3">Cola <br>
+        <input type="checkbox" name="basketItems" value="4">Cheese <br>
+        <input type="checkbox" name="basketItems" value="5">Candy bar <br>
+
+        <input type="button" value="Select All" onclick="check(document.frmSnacks.basketItems);"/> 
+
+        <input type="button" value="Deselect All" onclick="uncheck(document.frmSnacks.basketItems);"/>
+    </form>
+
+    <script>
+        function check(field){
+            for(var i=0; i < field.length;i++){
+                field[i].checked = true;
+            
+            }
+        }
+
+        function uncheck(field) {
+            for(var i=0; i < field.length; i++){
+                field[i].checked = false;
+            }
+        }
+    </script>
+</body>
+</html>
