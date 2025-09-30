@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm">
+        Message: <br>
+        <textarea name="myTextArea" id="myTextArea" rows="10" cols="40">I think it would be a bad idea to make a badge.</textarea> <br>
+        <input type="button" value="Replace characters bad" onclick="document.myForm.myTextArea.value = document.myForm.myTextArea.value.replace('bad','good');"/>
+    </form>
+    
+</body>
+</html>
