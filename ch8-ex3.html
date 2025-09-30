@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function uppercase(str) {
+            regexp = /^[A-Z]/;
+
+            if(regexp.test(str)){
+                document.write("String's first character is uppercase <br> ")
+            }else{
+                document.write("String's first character is not uppercase.")
+            }
+        }
+
+        uppercase("Welcome");
+        uppercase("welcome");
+    </script>
+</body>
+</html>
